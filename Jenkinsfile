@@ -41,7 +41,7 @@ node{
     
     stage('Containerize the application'){
         echo 'Creating Docker image'
-        sh "${docker} build -t kprasannamarolix/insure-me:${tagName} ."
+        sh "docker buildx build -t insure-me:latest ."
     }
     
     stage('Pushing it ot the DockerHub'){
