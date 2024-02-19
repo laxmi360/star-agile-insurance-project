@@ -9,13 +9,13 @@
   - name : Install Docker
     command : sudo yum install -y docker.io
     become : yes
-    become_user : ansible
+    become_user : root
 
   - name : Start Docker Service
     command : sudo systemctl start docker
     become : yes
-    become_user : ansible
+    become_user : root
 
   - name: Deploy Docker Container
-    command: docker run -itd -p 8081:8081 kprasannamarolix/insure-me
+    command: docker run -itd -p 8081:8081 kprasannamarolix/newimage3
       
